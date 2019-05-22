@@ -44,6 +44,8 @@ public class RotateObject : MonoBehaviour
 
             // store new mouse position
             _mouseReference = Input.mousePosition;
+
+            Debug.Log("Rotate");
         }
     }
 
@@ -54,6 +56,9 @@ public class RotateObject : MonoBehaviour
 
         // store mouse position
         _mouseReference = Input.mousePosition;
+
+        Debug.Log("Down");
+
     }
 
     void OnMouseUp()

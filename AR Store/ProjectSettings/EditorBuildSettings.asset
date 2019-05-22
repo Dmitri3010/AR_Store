@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainPage.unity
+    guid: 3598d618716c4d64ca6b3b6e968b67b9
+  - enabled: 1
     path: Assets/Scenes/Chair.unity
     guid: c64e2c5920451f64b8b57ed9ff6501bc
   m_configObjects: {}
