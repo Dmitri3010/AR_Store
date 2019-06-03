@@ -28,7 +28,7 @@ public class LoadObjects : MonoBehaviour
         Hashtable headers = new Hashtable();
         headers.Add("Content-Type", "application/json");
         Debug.Log(headers.ToString());
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://192.168.43.164:3000/api/products");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
