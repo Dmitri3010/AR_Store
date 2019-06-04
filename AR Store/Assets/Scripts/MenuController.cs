@@ -6,33 +6,38 @@ public class MenuController : MonoBehaviour
 
     private Vector2 startPos;
     private Vector2 target;
+    private bool IsOpen = false;
+    public GameObject Canvas;
 
-	void Start ()
-	{
-        var tr = transform as RectTransform;
-        target = tr.anchoredPosition;
-	}
 
-    void Update ()
+    void Start()
     {
-        var tr = transform as RectTransform;
-        tr.anchoredPosition = Vector2.MoveTowards(tr.anchoredPosition, target, moveSpeed * Time.deltaTime);
+        
+    }
 
-        if (Input.touchCount > 0) 
-        {             
-            Touch touch = Input.touches[0];
+    public void MenuControll()
+    {
+        if (IsOpen)
+            CloseMenu();
+        else
+            OpenMenu();
+    }
 
-            switch (touch.phase)                 
-            {                 
-                case TouchPhase.Began: startPos = touch.position; break;
-                case TouchPhase.Moved:
-                    //swipe horizontal?
-                    if (touch.position.x - startPos.x > 10)
-                        target = new Vector2(tr.sizeDelta.x / 2, tr.anchoredPosition.y);//show menu
-                    if (touch.position.x - startPos.x < -10)
-                        target = new Vector2(-tr.sizeDelta.x / 2, tr.anchoredPosition.y);//hide menu
-                    break;
-            }
-        }
-	}
+    void Update()
+    {
+    }
+
+    public void OpenMenu()
+    {
+        Canvas.SetActive(true);
+        Debug.Log("Open Menu");
+        IsOpen = true;
+    }
+
+    public  void CloseMenu()
+    {
+        Canvas.SetActive(false);
+        Debug.Log("hide menu");
+        IsOpen = false;
+    }
 }

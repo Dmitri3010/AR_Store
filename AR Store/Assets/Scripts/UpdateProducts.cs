@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class LoadObjects : MonoBehaviour
+public class UpdateProducts : MonoBehaviour
 {
     string JsonDataString;
     private Image img;
@@ -17,18 +16,17 @@ public class LoadObjects : MonoBehaviour
     private float rotateSpeed = 200f;
     public bool loading;
     public GameObject spiner;
-
+    public int categoryId;
     // Start is called before the first frame update
-    [Obsolete]
-    IEnumerator Start()
+   
+
+    [System.Obsolete]
+    public IEnumerable Load()
     {
         rectComponent = GameObject.Find("Loading Circle").GetComponent<RectTransform>();
-        Hashtable headers = new Hashtable();
-        headers.Add("Content-Type", "application/json");
-        Debug.Log(headers.ToString());
         UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
         readingsite.SetRequestHeader("Content-Type", "application/json");
-        readingsite.method = "GET"; 
+        readingsite.method = "GET";
         yield return readingsite.Send();
         while (!readingsite.isDone)
             yield return null;
@@ -44,39 +42,46 @@ public class LoadObjects : MonoBehaviour
 
         ProductListObject products = Processjson(JsonDataString);
         Debug.Log(products.Products.Count);
-        
+
+        foreach (Transform child in scrollItemPrefab.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         foreach (var item in products.Products)
         {
-            WWW www = new WWW(item.model);
-            while (!www.isDone)
-                yield return null;
-            Debug.Log(www.texture.width);
-            Debug.Log(www.texture.height);
-            Texture2D textWebPic = www.texture;
-            Debug.Log("ddd " + textWebPic.height);
-            Sprite = Sprite.Create(textWebPic, new Rect(0, 0, textWebPic.width, textWebPic.height), new Vector2(0, 0));
-            Debug.Log(item.name);
-            Generate(item.name, Sprite);
+            if (item.categoryId == categoryId)
+            {
+                WWW www = new WWW(item.model);
+                while (!www.isDone)
+                    yield return null;
+                Debug.Log(www.texture.width);
+                Debug.Log(www.texture.height);
+                Texture2D textWebPic = www.texture;
+                Debug.Log("ddd " + textWebPic.height);
+                Sprite = Sprite.Create(textWebPic, new Rect(0, 0, textWebPic.width, textWebPic.height), new Vector2(0, 0));
+                Debug.Log(item.name);
+                Generate(item.name, Sprite);
+            }
+
         }
+
         loading = true;
         spiner.active = false;
     }
 
-   
-
-    // Update is called once per frame
-    void Update()
+    public void LoadProduct()
     {
-        if (!loading)
-            rectComponent.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
+        Debug.Log("Start load new products");
+        Load();
     }
-    public ProductListObject Processjson(string jsonString)
+
+    private ProductListObject Processjson(string jsonString)
     {
         Debug.Log("deserialaze " + jsonString);
 
-        return JsonUtility.FromJson<ProductListObject>(jsonString);        
+        return JsonUtility.FromJson<ProductListObject>(jsonString);
     }
-   public void Generate(string name, Sprite image)
+    void Generate(string name, Sprite image)
     {
         GameObject scrollItemObj = Instantiate(scrollItemPrefab);
         scrollItemObj.transform.SetParent(scrollContent.transform, false);
@@ -84,50 +89,4 @@ public class LoadObjects : MonoBehaviour
         scrollItemObj.transform.Find("Image").gameObject.GetComponent<Image>().sprite = image;
 
     }
-}
-
-[Serializable]
-public class Product
-{
-    public int id;
-
-    public string name;
-
-    public string model;
-
-    public string cost;
-
-    public string description;
-
-    public bool isRotated;
-
-    public int categoryId;
-
-    public string imageForTarget;
-
-    public float height;
-
-    public float width;
-
-    public float distance;
-
-    public List<string> texturesObj;
-
-    public Texture2D image;
-
-}
-
-[Serializable]
-public class ProductListObject
-{
-    [SerializeField]
-    public List<Product> Products;
-}
-public class Category
-{
-    public int Id;
-
-    public string Name;
-
-    public string Image;
 }
