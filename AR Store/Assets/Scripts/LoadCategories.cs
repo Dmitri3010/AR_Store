@@ -24,6 +24,11 @@ public class LoadCategories : MonoBehaviour
     public GameObject spiner;
     private bool isRunning = false;
     public List<Product> listOfProducts;
+    public List<Category> listOfCategories;
+    public GameObject Menu;
+    public GameObject ErrorImage;
+
+    public bool IsRunning { get => isRunning; set => isRunning = value; }
 
 
 
@@ -55,7 +60,7 @@ public class LoadCategories : MonoBehaviour
         Debug.Log("Count categories: " + categories.Categories.Count);
         foreach (var item in categories.Categories)
         {
-
+            listOfCategories.Add(item);
             Debug.Log(item.name);
             Generate(item.name);
         }
@@ -86,9 +91,12 @@ public class LoadCategories : MonoBehaviour
             item.image = textWebPic;
             listOfProducts.Add(item);
         }
+        if (listOfProducts.Count == 0)
+            ErrorImage.active = true;
         Debug.Log("Count of products" + listOfProducts.Count);
         loading = true;
         spiner.active = false;
+        
     }
     public ProductListObject Processprodjson(string jsonString)
     {
@@ -97,35 +105,57 @@ public class LoadCategories : MonoBehaviour
         return JsonUtility.FromJson<ProductListObject>(jsonString);
     }
 
+    
+
     [Obsolete]
-    public void StartDownload()
+    public void StartDownload(string name)
     {
+        ErrorImage.active = false;
+
         Debug.Log("Lol");
+        foreach (Transform child in productsscrollContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        categoryId = GetCategoryId(name);
+        var counter = 0;
         foreach (var item in listOfProducts)
         {
             if (item.categoryId == categoryId)
             {
-                
+
                 Sprite = Sprite.Create(item.image, new Rect(0, 0, item.image.width, item.image.height), new Vector2(0, 0));
                 Debug.Log(item.name);
                 Generate(item.name, Sprite);
+                counter++;
             }
 
         }
-        foreach (Transform child in productsscrollContent.transform)
-        {
-            GameObject.DestroyImmediate(child.gameObject, true);
-        }
-
+        if (listOfProducts.Count == 0)
+            ErrorImage.active = true;
+        if(counter==0)
+            ErrorImage.active = true;
+        Menu.active = false;
         loading = true;
         spiner.active = false;
+    }
+
+    public int GetCategoryId(string name)
+    {
+        foreach(var cat in listOfCategories)
+        {
+            if (cat.name == name)
+                return cat.id;
+        }
+
+        return 1;
     }
 
     [Obsolete]
     public IEnumerable Load()
     {
-        isRunning = true;
-
+        IsRunning = true;
+        ErrorImage.active = false;
         Debug.Log("Click");
         rectComponent = GameObject.Find("Loading Circle").GetComponent<RectTransform>();
         UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
@@ -146,11 +176,7 @@ public class LoadCategories : MonoBehaviour
 
         ProductListObject products = ProcessProductjson(JsonDataString);
         Debug.Log(products.Products.Count);
-
-        foreach (Transform child in scrollItemPrefab.transform)
-        {
-            GameObject.DestroyImmediate(child.gameObject);
-        }
+       
         foreach (var item in products.Products)
         {
             if (item.categoryId == categoryId)
@@ -172,7 +198,7 @@ public class LoadCategories : MonoBehaviour
         loading = true;
         spiner.active = false;
         yield return null;
-        isRunning = false;
+        IsRunning = false;
 
     }
 
@@ -196,14 +222,6 @@ public class LoadCategories : MonoBehaviour
 
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!loading)
-            rectComponent.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
-
-    }
     private CategoriesListObject Processjson(string jsonString)
     {
         Debug.Log("deserialaze " + jsonString);
@@ -216,10 +234,7 @@ public class LoadCategories : MonoBehaviour
         scrollItemObj.transform.SetParent(scrollContent.transform, false);
         scrollItemObj.transform.Find("Text").gameObject.GetComponent<Text>().text = name;
 
-        scrollItemObj.GetComponent<Button>().onClick.AddListener((delegate { StartDownload(); }));
-        Debug.Log("pizda" + scrollItemObj.GetComponent<Button>().name);
-        //scrollItemObj.transform.gameObject.GetComponent<Button>().onClick.AddListener(delegate { Load(); });
-        //scrollItemObj.transform.Find("Text").gameObject.GetComponent<EventTrigger>().triggers.Add(entry);
+        scrollItemObj.GetComponent<Button>().onClick.AddListener((delegate { StartDownload(scrollItemObj.transform.Find("Text").gameObject.GetComponent<Text>().text); }));       
 
 
     }
