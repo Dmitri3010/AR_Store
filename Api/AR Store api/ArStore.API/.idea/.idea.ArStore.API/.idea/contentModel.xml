@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Dmitri\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Dmitri\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_ArStore.API.-353133820.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Unity AR\AR Store api\ArStore.API" t="IncludeFlat">
+      <e p="ArStore.API" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="ArStore.API.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="API" t="Include">
+            <e p="CategoriesController.cs" t="Include" />
+            <e p="ModelController.cs" t="Include" />
+            <e p="ProductsController.cs" t="Include" />
+            <e p="SimpleActionFiltre.cs" t="Include" />
+          </e>
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="Db" t="Include">
+          <e p="EfContext.cs" t="Include" />
+          <e p="SimpleRepozitory.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="API" t="Include">
+            <e p="CategoriesApiResponce.cs" t="Include" />
+            <e p="ProductsApiResponce.cs" t="Include" />
+          </e>
+          <e p="Entity" t="Include">
+            <e p="Base.cs" t="Include" />
+            <e p="Category.cs" t="Include" />
+            <e p="ErrorViewModel.cs" t="Include" />
+            <e p="Product.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+          </e>
+          <e p="View" t="Include">
+            <e p="LoginModel.cs" t="Include" />
+            <e p="RegisterModel.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="ArStore.API.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="FolderProfile.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Repository" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="Products.cs" t="Include" />
+          <e p="Users.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="ConfigureServices.cs" t="Include" />
+          <e p="Statics.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Tools" t="Include">
+          <e p="ModelsMapper.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Login.cshtml" t="Include" />
+            <e p="Login.cshtml.cs" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="Register.cshtml.cs" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="CategoriesAddOrUpdate.cshtml" t="Include" />
+            <e p="CategoriesList.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="Privacy.cshtml" t="Include" />
+            <e p="ProductsAddOrUpdate.cshtml" t="Include" />
+            <e p="ProductsList.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_CookieConsentPartial.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="Files" t="Include" />
+          <e p="images" t="Include">
+            <e p="categories" t="Include">
+              <e p="4b1bb218-8178-4606-b6f4-0677d2c06d06__1111.jpg" t="Include" />
+              <e p="6a32ee3c-c8d6-4de4-8d60-5d48cecfa582__416321t1h5237.jpg" t="Include" />
+              <e p="d6d9bb27-075b-4a85-b3c9-00a5df4bb79d__1111.jpg" t="Include" />
+              <e p="de0f3d50-3dac-4d0d-b4af-b761a2b73713__117500_gal.jpg" t="Include" />
+            </e>
+            <e p="products" t="Include">
+              <e p="03dbe8de-507f-435c-ad8c-1c9df55a5c73__Chair.FBX" t="Include" />
+              <e p="25266c37-8419-4e72-ae0e-e19bad0be613__armchair_PNG7040.png" t="Include" />
+              <e p="2bbb860b-af66-487b-b8cd-b9794109ec20__Annotation 2019-02-10 233814.jpg" t="Include" />
+              <e p="4be0723a-2bfd-4d22-a8ac-0a77f3222ef6__table_PNG6972.png" t="Include" />
+              <e p="4e5b4e94-4423-470b-bc54-55ee4bbabac5__Без названия.jpg" t="Include" />
+              <e p="50047518-cbd1-4471-865a-993403272892__image_2019-06-04_23-54-21.png" t="Include" />
+              <e p="5bc1a140-5115-4910-bccb-8959b5c65436__121544_1_white-chair-kuga-power-shot.jpg" t="Include" />
+              <e p="5f493a29-9460-4802-a895-e15025e0e2da__depositphotos_28253437-stock-photo-sofa-isolated-furniture-on-white.jpg" t="Include" />
+              <e p="608ecc6e-9b99-4f62-a877-34859467e302__p02.jpg" t="Include" />
+              <e p="62f060ae-b6e5-499c-a30d-a05e8ab5d921__12313.jpg" t="Include" />
+              <e p="68cd014d-c676-4e7a-93c5-cc8934ef04ea__chair.unity3d" t="Include" />
+              <e p="6973bed5-d1e1-475a-ae10-d5a334ffac6a__belarus_5_rubley_2009_avers.jpg" t="Include" />
+              <e p="6ca14d23-cc92-4dca-aecb-3a9d5d80be7a__photo_2017-12-15_18-28-58 (2).jpg" t="Include" />
+              <e p="6f4bc05a-4c26-41b0-a332-9ead4787993a__117500_gal.jpg" t="Include" />
+              <e p="73aa9c99-d612-4a65-9a58-060f87994ebf__416321t1h5237.jpg" t="Include" />
+              <e p="7e32b09e-07b3-4cc4-89f0-f6c0a2e71f3f__1111.jpg" t="Include" />
+              <e p="b9b66def-2aac-4667-9566-4b0dcc335d15__kreslo-stul_3-320.png" t="Include" />
+              <e p="bf079b06-0442-4dee-a198-12a6cc3b2098__Chair.FBX" t="Include" />
+              <e p="c94e3407-a090-4f13-bf05-a99895e75185__42P7WQJaHC0.jpg" t="Include" />
+              <e p="cd2a3603-9b9a-4900-a446-01c3cdeae892__avatar.jpg" t="Include" />
+              <e p="f0c753ec-3e20-4a55-bbd8-e799be96f717__chair.unity3d" t="Include" />
+              <e p="fb6988d3-de8b-4b40-a643-6ffb209aca50__230564_5.png" t="Include" />
+              <e p="fd1e17cd-ab6c-4444-ab92-f95ba575adc3__12313.jpg" t="Include" />
+              <e p="ffb80d0b-b819-49ac-90d1-cb1d53c23a36__Без названия.jpg" t="Include" />
+            </e>
+          </e>
+          <e p="js" t="Include">
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ArStore.API.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

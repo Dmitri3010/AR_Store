@@ -1,0 +1,102 @@
+﻿@using ArStore.API.Models
+@model ArStore.API.Models.Product
+@{
+
+    var error = ViewData["Exception"] as Exception;
+    var categories = ViewData["Categories"] as List<Category>;
+
+    var categoryId = 1;
+}
+
+<h4>Продукция</h4>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ProductsAddOrUpdate" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" type="hidden"/>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"> Название </label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"> Категория</label>
+                <select id="categoriesItems" asp-for="CategoryId"
+                        asp-items="@(new SelectList(categories, nameof(Category.Id), nameof(Category.Name)))">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cost" class="control-label"> Цена</label>
+                <input asp-for="Cost" asp-is-invariant="true" class="form-control"/>
+                <span asp-validation-for="Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">описание</label>
+                <input asp-for="Description" asp-is-invariant="true" class="form-control" type="text" step="any"/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"> Высота</label>
+                <input asp-for="Height" asp-is-invariant="true" class="form-control"/>
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Width" class="control-label"> Ширина</label>
+                <input asp-for="Width" asp-is-invariant="true" class="form-control"/>
+                <span asp-validation-for="Width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distance" class="control-label"> Длинна</label>
+                <input asp-for="Distance" asp-is-invariant="true" class="form-control"/>
+                <span asp-validation-for="Distance" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Scene" class="control-label"> Сцена</label>
+                <input asp-for="Scene" asp-is-invariant="true" class="form-control"/>
+                <span asp-validation-for="Scene" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsRotated"/>Вращается ли
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Текстуры</label>
+                <input type="file" name="files" id="inputFile" multiple>
+                <img id="image_upload_preview" width="200"/>
+                <p class="help-block">Выберите новую картинку или оставьте пустым, если не хотите менять картинку.</p>
+            </div>
+            <input asp-for="texturesObj" class="form-control" type="hidden"/>
+
+            <div class="form-group">
+                <label>Главная картинка</label>
+                <input type="file" name="mainfile" id="inputImage">
+                <img id="image_upload_preview" width="200"/>
+                <p class="help-block">Выберите новую картинку или оставьте пустым, если не хотите менять картинку.</p>
+            </div>
+            <input asp-for="ImageForTarget" class="form-control" type="hidden"/>
+
+            <div class="form-group">
+                <label>Модель</label>
+                <input type="file" name="model" id="inputmodel">
+                <p class="help-block">Выберите новую модель или оставьте пустым, если не хотите менять картинку.</p>
+            </div>
+            <input asp-for="Model" class="form-control" type="hidden"/>
+
+
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-default"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="form-group">
+    <a class="btn btn-default" asp-action="ProductsList">Вернуться к списку</a>
+</div>
