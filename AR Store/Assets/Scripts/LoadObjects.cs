@@ -17,7 +17,7 @@ public class LoadObjects : MonoBehaviour
     private float rotateSpeed = 200f;
     public bool loading;
     public GameObject spiner;
-    public GameObject SingleProductCost, SingleProductTest, SingleProductImage;
+    public GameObject SingleProductCost, SingleProductTest, SingleProductImage, SingleProductName, SingleProductSize;
     public List<Product> listOfProducts;
     public GameObject MainObj, SingleObj;
 
@@ -103,6 +103,8 @@ public class LoadObjects : MonoBehaviour
                 SingleProductTest.GetComponent<Text>().text = prod.description;
                 SingleProductCost.GetComponent<Text>().text = prod.cost;
                 SingleProductImage.GetComponent<Image>().sprite = prod.sprite;
+                SingleProductName.GetComponent<Text>().text = prod.name;
+                SingleProductSize.GetComponent<Text>().text = $"{prod.height} * {prod.width} * {prod.distance}";
             }
         }
         MainObj.active = false;
