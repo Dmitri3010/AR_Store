@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ArStore.API.Controllers
 {
-    [Authorize]
+    
     public class HomeController : Controller
     {
         private static string WebRootPath => Statics.WebRootPath;

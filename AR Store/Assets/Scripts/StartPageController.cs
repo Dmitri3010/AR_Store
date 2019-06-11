@@ -16,7 +16,7 @@ public class StartPageController : MonoBehaviour
         Hashtable headers = new Hashtable();
         headers.Add("Content-Type", "application/json");
         Debug.Log(headers.ToString());
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/categories");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://arstore.by/api/categories");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
@@ -49,11 +49,11 @@ public class StartPageController : MonoBehaviour
 
     public void OpenWelcomePage()
     {
-        SceneManager.LoadScene("WelcomeScreen", LoadSceneMode.Additive);
+        SceneManager.LoadScene("WelcomeScreen", LoadSceneMode.Single);
     }
 
     public void OpenMainPage()
     {
-        SceneManager.LoadScene("MainPage", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MainPage", LoadSceneMode.Single);
     }
 }

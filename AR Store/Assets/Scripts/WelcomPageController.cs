@@ -30,6 +30,13 @@ public class WelcomPageController : MonoBehaviour
         threed.active = false;
     }
 
+    public void OpenFirst()
+    {
+        first.active = true;
+        second.active = false;
+        threed.active = false;
+    }
+
     public void OpenThreed()
     {
         first.active = false;
@@ -41,22 +48,11 @@ public class WelcomPageController : MonoBehaviour
     {
         spiner.active = true;
         RotateSpiner();
-        SceneManager.LoadScene("MainPage", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MainPage", LoadSceneMode.Single);
     }
 
     IEnumerator RotateSpiner()
     {
-        // This will wait 1 second like Invoke could do, remove this if you don't need it
         yield return new WaitForSeconds(5);
-
-
-        float timePassed = 0;
-        while (timePassed < 3)
-        {
-            spiner.active = true;
-            timePassed += Time.deltaTime;
-
-            yield return null;
-        }
     }
 }

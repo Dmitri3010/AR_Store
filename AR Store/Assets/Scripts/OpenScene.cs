@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OpenScene : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class OpenScene : MonoBehaviour
     }
 
     [System.Obsolete]
-    public void OpenNewScene(string naffme)
+    public void OpenNewScene(string name)
     {
         Application.LoadLevel(name);
     }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadCategories : MonoBehaviour
@@ -27,6 +28,8 @@ public class LoadCategories : MonoBehaviour
     public List<Category> listOfCategories;
     public GameObject Menu;
     public GameObject ErrorImage;
+    public GameObject SingleProductCost, SingleProductTest, SingleProductImage, SingleProductName, SingleProductSize, ScanButton;
+    public GameObject MainObj, SingleObj;
 
     public bool IsRunning { get => isRunning; set => isRunning = value; }
 
@@ -40,7 +43,7 @@ public class LoadCategories : MonoBehaviour
         Hashtable headers = new Hashtable();
         headers.Add("Content-Type", "application/json");
         Debug.Log(headers.ToString());
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/categories");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://arstore.by/api/categories");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
@@ -64,7 +67,7 @@ public class LoadCategories : MonoBehaviour
             Debug.Log(item.name);
             Generate(item.name);
         }
-        UnityWebRequest readingprod = UnityWebRequest.Get("http://localhost:5000/api/products");
+        UnityWebRequest readingprod = UnityWebRequest.Get("http://arstore.by/api/products");
         readingprod.SetRequestHeader("Content-Type", "application/json");
         readingprod.method = "GET";
         yield return readingprod.Send();
@@ -89,6 +92,8 @@ public class LoadCategories : MonoBehaviour
                 yield return null;
             Texture2D textWebPic = www.texture;
             item.image = textWebPic;
+            Sprite = Sprite.Create(textWebPic, new Rect(0, 0, textWebPic.width, textWebPic.height), new Vector2(0, 0));
+            item.sprite = Sprite;
             listOfProducts.Add(item);
         }
         if (listOfProducts.Count == 0)
@@ -158,7 +163,7 @@ public class LoadCategories : MonoBehaviour
         ErrorImage.active = false;
         Debug.Log("Click");
         rectComponent = GameObject.Find("Loading Circle").GetComponent<RectTransform>();
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://arstore.by/api/products");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
@@ -219,7 +224,31 @@ public class LoadCategories : MonoBehaviour
         scrollItemObj.transform.SetParent(productsscrollContent.transform, false);
         scrollItemObj.transform.Find("Text").gameObject.GetComponent<Text>().text = name;
         scrollItemObj.transform.Find("Image").gameObject.GetComponent<Image>().sprite = image;
+        scrollItemObj.GetComponent<Button>().onClick.AddListener((delegate { OpenSingleProduct(scrollItemObj.transform.Find("Text").gameObject.GetComponent<Text>().text); }));
 
+
+    }
+    public void OpenSingleProduct(string name)
+    {
+        foreach (var prod in listOfProducts)
+        {
+            if (prod.name == name)
+            {
+                SingleProductTest.GetComponent<Text>().text = prod.description;
+                SingleProductCost.GetComponent<Text>().text = prod.cost;
+                SingleProductImage.GetComponent<Image>().sprite = prod.sprite;
+                SingleProductName.GetComponent<Text>().text = prod.name;
+                SingleProductSize.GetComponent<Text>().text = $"{prod.height} * {prod.width} * {prod.distance}";
+                ScanButton.GetComponent<Button>().onClick.AddListener(delegate { OpenArScene(prod.scene); });
+            }
+        }
+        MainObj.active = false;
+        SingleObj.active = true;
+
+    }
+    public void OpenArScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 
     private CategoriesListObject Processjson(string jsonString)

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Dmitri\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Dmitri\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_ArStore.API.-353133820.00" t="ExcludeRecursive" />
-    <e p="D:\Projects\Unity AR\AR Store api\ArStore.API" t="IncludeFlat">
+    <e p="C:\Users\Dmitri\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_ArStore.API.1452930286.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Unity AR\AR Store\API\AR Store api\ArStore.API" t="IncludeFlat">
       <e p="ArStore.API" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />

@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoadObjects : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class LoadObjects : MonoBehaviour
     private float rotateSpeed = 200f;
     public bool loading;
     public GameObject spiner;
-    public GameObject SingleProductCost, SingleProductTest, SingleProductImage, SingleProductName, SingleProductSize;
+    public GameObject SingleProductCost, SingleProductTest, SingleProductImage, SingleProductName, SingleProductSize , ScanButton;
     public List<Product> listOfProducts;
     public GameObject MainObj, SingleObj;
 
@@ -31,7 +32,7 @@ public class LoadObjects : MonoBehaviour
         Hashtable headers = new Hashtable();
         headers.Add("Content-Type", "application/json");
         Debug.Log(headers.ToString());
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://arstore.by/api/products");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
@@ -105,11 +106,17 @@ public class LoadObjects : MonoBehaviour
                 SingleProductImage.GetComponent<Image>().sprite = prod.sprite;
                 SingleProductName.GetComponent<Text>().text = prod.name;
                 SingleProductSize.GetComponent<Text>().text = $"{prod.height} * {prod.width} * {prod.distance}";
+                ScanButton.GetComponent<Button>().onClick.AddListener(delegate { OpenArScene(prod.scene); });
             }
         }
         MainObj.active = false;
         SingleObj.active = true;
 
+    }
+
+    public void OpenArScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 
     public void ReturnToMain()
@@ -137,6 +144,8 @@ public class Product
     public int categoryId;
 
     public string imageForTarget;
+
+    public string scene;
 
     public float height;
 

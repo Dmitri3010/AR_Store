@@ -24,7 +24,7 @@ public class UpdateProducts : MonoBehaviour
     public IEnumerable Load()
     {
         rectComponent = GameObject.Find("Loading Circle").GetComponent<RectTransform>();
-        UnityWebRequest readingsite = UnityWebRequest.Get("http://localhost:5000/api/products");
+        UnityWebRequest readingsite = UnityWebRequest.Get("http://arstore.by/api/products");
         readingsite.SetRequestHeader("Content-Type", "application/json");
         readingsite.method = "GET";
         yield return readingsite.Send();
