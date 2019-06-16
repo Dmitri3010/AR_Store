@@ -8,7 +8,7 @@ namespace ArStore.API.Models.API
 {
     public class CategoriesApiResponce
     {
-         [JsonProperty(PropertyName = "id")]
+        [JsonProperty(PropertyName = "id")]
         public int Id { get; set; }
 
         [JsonProperty(PropertyName = "name")]

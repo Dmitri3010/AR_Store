@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38497c06-5aba-4a06-a76a-35c76018e5b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../AR Store/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AR Store/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArStore.API/Helpers/StringExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArStore.API/Models/Entity/Order.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArStore.API/Tools/Validator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArStore.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArStore.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ArStore.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArStore.API/Db/EfContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArStore.API/Db/EfContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArStore.API/bin/Debug/netcoreapp2.2/ArStore.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ArStore.API/bin/Debug/netcoreapp2.2/ArStore.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArStore.API/bin/Debug/netcoreapp2.2/publish/ArStore.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ArStore.API/bin/Debug/netcoreapp2.2/publish/ArStore.API.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,114 +21,135 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/Repository/Products.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <marker date="1559719147910" expanded="false" signature="6:137" ph="..." />
-                <marker date="1559719147910" expanded="true" signature="171:933" ph="{...}" />
-                <marker date="1559719147910" expanded="true" signature="199:931" ph="{...}" />
-                <marker date="1559719147910" expanded="true" signature="295:356" ph="{...}" />
-                <marker date="1559719147910" expanded="true" signature="399:483" ph="{...}" />
-                <marker date="1559719147910" expanded="true" signature="543:736" ph="{...}" />
-                <marker date="1559719147910" expanded="true" signature="791:925" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ArStore.API/Db/EfContext.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+            <state relative-caret-position="118">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding>
-                <marker date="1559760531256" expanded="false" signature="6:159" ph="..." />
-                <marker date="1559760531256" expanded="true" signature="185:995" ph="{...}" />
-                <marker date="1559760531256" expanded="true" signature="226:993" ph="{...}" />
-                <marker date="1559760531256" expanded="true" signature="478:987" ph="{...}" />
-                <marker date="1559760531256" expanded="true" signature="534:977" ph="{...}" />
-                <marker date="1559760531256" expanded="true" signature="791:963" ph="/* optionsBuilder.UseSqlServer( ... */" />
+                <marker date="1560691753009" expanded="false" signature="6:159" ph="..." />
+                <marker date="1560691753009" expanded="true" signature="185:997" ph="{...}" />
+                <marker date="1560691753009" expanded="true" signature="226:995" ph="{...}" />
+                <marker date="1560691753009" expanded="true" signature="478:989" ph="{...}" />
+                <marker date="1560691753009" expanded="true" signature="534:979" ph="{...}" />
+                <marker date="1560691753009" expanded="true" signature="640:797" ph="/* optionsBuilder.UseSqlServer( ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.json">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/OrdersController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="315">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <marker date="1560693270621" expanded="true" signature="6:100" ph="..." />
+                <marker date="1560693270621" expanded="true" signature="139:1120" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="327:1112" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="353:426" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="468:542" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="586:664" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="681:988" ph="{...}" />
+                <marker date="1560693270621" expanded="true" signature="711:945" ph="/* OrderService.AddOrder(request); ... */" />
+                <marker date="1560693270621" expanded="true" signature="1021:1096" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.Development.json">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Order.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+            <state relative-caret-position="90">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <marker date="1560692680452" expanded="true" signature="28:81" ph="{...}" />
+                <marker date="1560692680452" expanded="true" signature="58:79" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/HomeController.cs">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Models/API/OrderApiRequest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="368">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
-                <marker date="1559728336307" expanded="false" signature="6:330" ph="..." />
-                <marker date="1559728336307" expanded="true" signature="365:4885" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="417:4883" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="527:574" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="614:661" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="792:925" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="990:1143" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="1226:1340" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="1403:1501" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="1582:1735" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="1877:2538" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="2097:2368" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="2648:2921" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="2994:3165" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="3236:3399" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="3470:4114" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="3510:3567" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="3782:4029" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="3914:4015" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="4047:4104" ph="{...}" />
-                <marker date="1559728336307" expanded="true" signature="4123:4877" ph="/* private static string SaveModel(IFormFile file, string folder) ... */" />
+                <marker date="1560694002349" expanded="true" signature="6:72" ph="..." />
+                <marker date="1560694002349" expanded="true" signature="106:760" ph="{...}" />
+                <marker date="1560694002349" expanded="true" signature="141:758" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Product.cs">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Tools/Validator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="42">
+              <caret line="75" column="83" lean-forward="true" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
               <folding>
-                <marker date="1559711057050" expanded="false" signature="6:171" ph="..." />
-                <marker date="1559711057050" expanded="true" signature="201:1170" ph="{...}" />
-                <marker date="1559711057050" expanded="true" signature="235:1168" ph="{...}" />
-                <marker date="1559711057050" expanded="true" signature="750:969" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="6:160" ph="..." />
+                <marker date="1560693197664" expanded="true" signature="189:4090" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="225:3338" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="334:1320" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="624:1310" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="957:1060" ph="/* if value string try cast object to string ... */" />
+                <marker date="1560693197664" expanded="true" signature="1405:1534" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="1614:1674" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="1744:2335" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="2000:2298" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="2399:2600" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="2686:2912" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="3443:3605" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="3507:3558" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="3655:4088" ph="{...}" />
+                <marker date="1560693197664" expanded="true" signature="3779:3928" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/Services/Statics.cs">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Helpers/StringExtensions.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
-                <marker date="1557819313598" expanded="false" signature="6:174" ph="..." />
-                <marker date="1557819313598" expanded="true" signature="206:437" ph="{...}" />
-                <marker date="1557819313598" expanded="true" signature="233:435" ph="{...}" />
+                <marker date="1560693124545" expanded="true" signature="29:486" ph="{...}" />
+                <marker date="1560693124545" expanded="true" signature="73:484" ph="{...}" />
+                <marker date="1560693124545" expanded="true" signature="232:478" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding>
+                <marker date="1560692712540" expanded="false" signature="6:119" ph="..." />
+                <marker date="1560692712540" expanded="true" signature="153:466" ph="{...}" />
+                <marker date="1560692712540" expanded="true" signature="194:464" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/CategoriesController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <marker date="1559427074510" expanded="false" signature="6:232" ph="..." />
+                <marker date="1559427074510" expanded="true" signature="271:977" ph="{...}" />
+                <marker date="1559427074510" expanded="true" signature="380:975" ph="{...}" />
+                <marker date="1559427074510" expanded="true" signature="634:969" ph="{...}" />
+                <marker date="1559427074510" expanded="true" signature="721:948" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -133,7 +158,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ArStore.API/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="225">
               <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
               <folding>
                 <marker date="1559714738832" expanded="false" signature="6:501" ph="..." />
@@ -153,25 +178,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArStore.API/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-              <folding>
-                <marker date="1557782476042" expanded="false" signature="6:255" ph="..." />
-                <marker date="1557782476042" expanded="true" signature="278:605" ph="{...}" />
-                <marker date="1557782476042" expanded="true" signature="305:603" ph="{...}" />
-                <marker date="1557782476042" expanded="true" signature="358:432" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/ProductsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            <state relative-caret-position="-15">
+              <caret line="18" column="19" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="19" />
               <folding>
                 <marker date="1559426242897" expanded="false" signature="6:362" ph="..." />
                 <marker date="1559426242897" expanded="true" signature="401:1297" ph="{...}" />
@@ -193,14 +203,19 @@
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/Account/Register.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/Account/Login.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/View/RegisterModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/API/ProductsApiResponce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Helpers/StringExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/View/LoginModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Base.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Models/API/OrderApiRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Order.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/OrdersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Services/Statics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Repository/Category.cs" root0="FORCE_HIGHLIGHTING" />
@@ -209,8 +224,10 @@
     <setting file="file://$PROJECT_DIR$/ArStore.API/Db/SimpleRepozitory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Repository/Users.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Tools/Validator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/ProductsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ArStore.API/Views/Home/ProductsAddOrUpdate.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -241,6 +258,12 @@
         <option value="$PROJECT_DIR$/ArStore.API/appsettings.json" />
         <option value="$PROJECT_DIR$/ArStore.API/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/ArStore.API/Db/EfContext.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Models/Entity/Order.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Helpers/StringExtensions.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Tools/Validator.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Controllers/API/OrdersController.cs" />
+        <option value="$PROJECT_DIR$/ArStore.API/Models/API/OrderApiRequest.cs" />
       </list>
     </option>
   </component>
@@ -264,7 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -300,34 +322,34 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repository" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="API" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="images" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Entity" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
               <item name="ArStore.API" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="images" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="products" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Tools" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
     </panes>
   </component>
@@ -352,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Publish to folder.Publish">
+  <component name="RunManager" selected=".NET Launch Settings Profile.ArStore.API: IIS Express">
     <configuration name="Publish" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish target_folder="$USER_HOME$/Desktop/arnew" target_framework="netcoreapp2.2" uuid_high="-8659114270562170108" uuid_low="-6250265130202069287" />
       <method v="2">
@@ -410,11 +432,12 @@
       <workItem from="1559655583677" duration="7665000" />
       <workItem from="1559720928659" duration="1483000" />
       <workItem from="1559728286512" duration="3642000" />
+      <workItem from="1560691053952" duration="2764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20891000" />
+    <option name="totallyTimeSpent" value="23655000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,8 +450,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +471,7 @@
       <window_info anchor="bottom" id="REST Client" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="16" visible="true" weight="0.3290735" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.3290735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -707,24 +731,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/Db/EfContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-          <folding>
-            <marker date="1559760531256" expanded="false" signature="6:159" ph="..." />
-            <marker date="1559760531256" expanded="true" signature="185:995" ph="{...}" />
-            <marker date="1559760531256" expanded="true" signature="226:993" ph="{...}" />
-            <marker date="1559760531256" expanded="true" signature="478:987" ph="{...}" />
-            <marker date="1559760531256" expanded="true" signature="534:977" ph="{...}" />
-            <marker date="1559760531256" expanded="true" signature="791:963" ph="/* optionsBuilder.UseSqlServer( ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ArStore.API/Repository/Products.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="210">
           <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding>
             <marker date="1559719147910" expanded="false" signature="6:137" ph="..." />
@@ -738,23 +747,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/ProductsController.cs">
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Product.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <marker date="1559426242897" expanded="false" signature="6:362" ph="..." />
-            <marker date="1559426242897" expanded="true" signature="401:1297" ph="{...}" />
-            <marker date="1559426242897" expanded="true" signature="508:1294" ph="{...}" />
-            <marker date="1559426242897" expanded="true" signature="768:1285" ph="{...}" />
-            <marker date="1559426242897" expanded="true" signature="854:1264" ph="{...}" />
+            <marker date="1559711057050" expanded="false" signature="6:171" ph="..." />
+            <marker date="1559711057050" expanded="true" signature="201:1170" ph="{...}" />
+            <marker date="1559711057050" expanded="true" signature="235:1168" ph="{...}" />
+            <marker date="1559711057050" expanded="true" signature="750:969" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ArStore.API/Services/Statics.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="90">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <marker date="1557819313598" expanded="false" signature="6:174" ph="..." />
@@ -766,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ArStore.API/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="135">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
           <folding>
             <marker date="1557782476042" expanded="false" signature="6:255" ph="..." />
             <marker date="1557782476042" expanded="true" signature="278:605" ph="{...}" />
@@ -777,57 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.Development.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding>
-            <marker date="1559714738832" expanded="false" signature="6:501" ph="..." />
-            <marker date="1559714738832" expanded="true" signature="524:2812" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="551:2810" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="635:788" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="1011:1784" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="1097:1361" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="1551:1670" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="1972:2804" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="2019:2096" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="2113:2372" ph="{...}" />
-            <marker date="1559714738832" expanded="true" signature="2634:2792" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Product.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1559711057050" expanded="false" signature="6:171" ph="..." />
-            <marker date="1559711057050" expanded="true" signature="201:1170" ph="{...}" />
-            <marker date="1559711057050" expanded="true" signature="235:1168" ph="{...}" />
-            <marker date="1559711057050" expanded="true" signature="750:969" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/HomeController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="-187">
+          <caret line="127" column="43" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
           <folding>
             <marker date="1559728336307" expanded="false" signature="6:330" ph="..." />
             <marker date="1559728336307" expanded="true" signature="365:4885" ph="{...}" />
@@ -850,6 +811,173 @@
             <marker date="1559728336307" expanded="true" signature="3914:4015" ph="{...}" />
             <marker date="1559728336307" expanded="true" signature="4047:4104" ph="{...}" />
             <marker date="1559728336307" expanded="true" signature="4123:4877" ph="/* private static string SaveModel(IFormFile file, string folder) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="110" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <marker date="1559714738832" expanded="false" signature="6:501" ph="..." />
+            <marker date="1559714738832" expanded="true" signature="524:2812" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="551:2810" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="635:788" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="1011:1784" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="1097:1361" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="1551:1670" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="1972:2804" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="2019:2096" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="2113:2372" ph="{...}" />
+            <marker date="1559714738832" expanded="true" signature="2634:2792" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Db/EfContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <marker date="1560691753009" expanded="false" signature="6:159" ph="..." />
+            <marker date="1560691753009" expanded="true" signature="185:997" ph="{...}" />
+            <marker date="1560691753009" expanded="true" signature="226:995" ph="{...}" />
+            <marker date="1560691753009" expanded="true" signature="478:989" ph="{...}" />
+            <marker date="1560691753009" expanded="true" signature="534:979" ph="{...}" />
+            <marker date="1560691753009" expanded="true" signature="640:797" ph="/* optionsBuilder.UseSqlServer( ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/CategoriesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <marker date="1559427074510" expanded="false" signature="6:232" ph="..." />
+            <marker date="1559427074510" expanded="true" signature="271:977" ph="{...}" />
+            <marker date="1559427074510" expanded="true" signature="380:975" ph="{...}" />
+            <marker date="1559427074510" expanded="true" signature="634:969" ph="{...}" />
+            <marker date="1559427074510" expanded="true" signature="721:948" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/ProductsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <marker date="1559426242897" expanded="false" signature="6:362" ph="..." />
+            <marker date="1559426242897" expanded="true" signature="401:1297" ph="{...}" />
+            <marker date="1559426242897" expanded="true" signature="508:1294" ph="{...}" />
+            <marker date="1559426242897" expanded="true" signature="768:1285" ph="{...}" />
+            <marker date="1559426242897" expanded="true" signature="854:1264" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Models/Entity/Order.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1560692680452" expanded="true" signature="28:81" ph="{...}" />
+            <marker date="1560692680452" expanded="true" signature="58:79" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Models/API/CategoriesApiResponce.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <marker date="1560692712540" expanded="false" signature="6:119" ph="..." />
+            <marker date="1560692712540" expanded="true" signature="153:466" ph="{...}" />
+            <marker date="1560692712540" expanded="true" signature="194:464" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Helpers/StringExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <marker date="1560693124545" expanded="true" signature="29:486" ph="{...}" />
+            <marker date="1560693124545" expanded="true" signature="73:484" ph="{...}" />
+            <marker date="1560693124545" expanded="true" signature="232:478" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Tools/Validator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="75" column="83" lean-forward="true" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
+          <folding>
+            <marker date="1560693197664" expanded="true" signature="6:160" ph="..." />
+            <marker date="1560693197664" expanded="true" signature="189:4090" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="225:3338" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="334:1320" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="624:1310" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="957:1060" ph="/* if value string try cast object to string ... */" />
+            <marker date="1560693197664" expanded="true" signature="1405:1534" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="1614:1674" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="1744:2335" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="2000:2298" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="2399:2600" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="2686:2912" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="3443:3605" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="3507:3558" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="3655:4088" ph="{...}" />
+            <marker date="1560693197664" expanded="true" signature="3779:3928" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Controllers/API/OrdersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <marker date="1560693270621" expanded="true" signature="6:100" ph="..." />
+            <marker date="1560693270621" expanded="true" signature="139:1120" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="327:1112" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="353:426" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="468:542" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="586:664" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="681:988" ph="{...}" />
+            <marker date="1560693270621" expanded="true" signature="711:945" ph="/* OrderService.AddOrder(request); ... */" />
+            <marker date="1560693270621" expanded="true" signature="1021:1096" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArStore.API/Models/API/OrderApiRequest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <marker date="1560694002349" expanded="true" signature="6:72" ph="..." />
+            <marker date="1560694002349" expanded="true" signature="106:760" ph="{...}" />
+            <marker date="1560694002349" expanded="true" signature="141:758" ph="{...}" />
           </folding>
         </state>
       </provider>

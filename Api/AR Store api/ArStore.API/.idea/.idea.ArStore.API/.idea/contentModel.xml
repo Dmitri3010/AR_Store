@@ -14,6 +14,7 @@
           <e p="API" t="Include">
             <e p="CategoriesController.cs" t="Include" />
             <e p="ModelController.cs" t="Include" />
+            <e p="OrdersController.cs" t="Include" />
             <e p="ProductsController.cs" t="Include" />
             <e p="SimpleActionFiltre.cs" t="Include" />
           </e>
@@ -23,15 +24,20 @@
           <e p="EfContext.cs" t="Include" />
           <e p="SimpleRepozitory.cs" t="Include" />
         </e>
+        <e p="Helpers" t="Include">
+          <e p="StringExtensions.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="API" t="Include">
             <e p="CategoriesApiResponce.cs" t="Include" />
+            <e p="OrderApiRequest.cs" t="Include" />
             <e p="ProductsApiResponce.cs" t="Include" />
           </e>
           <e p="Entity" t="Include">
             <e p="Base.cs" t="Include" />
             <e p="Category.cs" t="Include" />
             <e p="ErrorViewModel.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
             <e p="Product.cs" t="Include" />
             <e p="User.cs" t="Include" />
           </e>
@@ -66,6 +72,7 @@
         <e p="Startup.cs" t="Include" />
         <e p="Tools" t="Include">
           <e p="ModelsMapper.cs" t="Include" />
+          <e p="Validator.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
