@@ -10,7 +10,7 @@ namespace ArStore.API.Controllers.API
     public class OrdersController:ControllerBase
     {
         [HttpPost]
-        public IActionResult Post(OrderApiRequest request)
+        public IActionResult Post([FromForm]OrderApiRequest request)
         {
             try
             {

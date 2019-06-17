@@ -11,7 +11,7 @@ namespace ArStore.API.Models.API
         [ValidationPattern(@"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$")]
         public string Phone { get; set; }
 
-        public string Address { get; set; }
+        public string Adress { get; set; }
 
         [ValidationPattern(@"\w+@\w+[.]\w+")]
         public string Email { get; set; }

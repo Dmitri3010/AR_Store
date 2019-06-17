@@ -81,8 +81,6 @@ public class LoadObjects : MonoBehaviour
     }
     public ProductListObject Processjson(string jsonString)
     {
-        Debug.Log("deserialaze " + jsonString);
-
         return JsonUtility.FromJson<ProductListObject>(jsonString);
     }
     public void Generate(string name, Sprite image)
