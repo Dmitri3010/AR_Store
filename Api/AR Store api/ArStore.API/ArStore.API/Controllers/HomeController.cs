@@ -55,6 +55,13 @@ namespace ArStore.API.Controllers
             var products = Products.Get();
             return View(products);
         }
+        
+        [HttpGet]
+        public IActionResult OrdersList()
+        {
+            var orders = Orders.Get();
+            return View(orders);
+        }
 
         [HttpGet]
         public IActionResult ProductsAddOrUpdate(int id = -1)
@@ -142,29 +149,6 @@ namespace ArStore.API.Controllers
                 return null;
             }
         }
-        //private static string SaveModel(IFormFile file, string folder)
-        //{
-        //    if (file == null)
-        //    {
-        //        return null;
-        //    }
-
-        //    var fileName = $"{Guid.NewGuid()}__{file.FileName}";
-        //    var saveImagePath = $"images/{folder}/{fileName}";
-        //    var fullPath = Path.Combine(ContentRootPath, saveImagePath);
-
-        //    try
-        //    {
-        //        using (var fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
-        //        {
-        //            file.CopyTo(fileStream);
-        //            return fileName;
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        return null;
-        //    }
-        //}
+        
     }
 }

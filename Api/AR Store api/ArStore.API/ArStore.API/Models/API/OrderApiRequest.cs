@@ -8,7 +8,7 @@ namespace ArStore.API.Models.API
     {
         public string Name { get; set; }
 
-        [ValidationPattern(@"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$")]
+        //[ValidationPattern(@"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$")]
         public string Phone { get; set; }
 
         public string Adress { get; set; }
@@ -25,6 +25,8 @@ namespace ArStore.API.Models.API
         public DateTime Date { get; set; }
         
         public string Comment { get; set; }
+        
+        public int ProductId { get; set; }
         
         public List<Product> Products { get; set; }
 

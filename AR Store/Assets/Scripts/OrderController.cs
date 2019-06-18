@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class OrderController : MonoBehaviour
 {
     public InputField name, phone, adress;
+    public int ProductId;
+    public GameObject okPanel, ErrorPanel;
+
 
     public void SendRequest()
     {
@@ -20,6 +23,7 @@ public class OrderController : MonoBehaviour
         form.AddField("Name", name.text);
         form.AddField("Phone", phone.text);
         form.AddField("Adress", adress.text);
+        form.AddField("ProductId", ProductId);
 
         UnityWebRequest www = UnityWebRequest.Post("http://localhost:58335/api/orders", form);
         yield return www.SendWebRequest();
@@ -27,10 +31,13 @@ public class OrderController : MonoBehaviour
         if (www.isNetworkError || www.isHttpError)
         {
             Debug.Log(www.error);
+            ErrorPanel.active = true;
         }
         else
         {
             Debug.Log("Form upload complete!");
+            okPanel.active = true;
+
         }
     }
 }

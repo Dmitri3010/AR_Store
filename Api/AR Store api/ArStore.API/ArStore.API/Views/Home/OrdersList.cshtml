@@ -1,0 +1,63 @@
+@model IEnumerable<ArStore.API.Models.Order>
+@{
+    ViewData["Title"] = "Заказы";
+
+    var counter = 0;
+    var count = ViewData["Count"] as int?;
+    var totalCount = ViewData["TotalCount"] as int?;
+}
+
+<h2>Категории</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            №
+        </th>
+        <th>
+            Имя
+        </th>
+        <th>
+            Телефон
+        </th>
+        <th>
+            Дата
+        </th>
+         <th>
+                    Адрес
+                </th>
+        <th>
+            Товар
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @(++counter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+             <td>
+                            @Html.DisplayFor(modelItem => item.Adress)
+                        </td>
+
+
+            <td>
+                @Html.ActionLink("Открыть", "ProductsAddOrUpdate", new {id = item.ProductId}) |
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

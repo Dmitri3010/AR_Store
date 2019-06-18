@@ -62,6 +62,7 @@
         </e>
         <e p="Repository" t="Include">
           <e p="Category.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
           <e p="Products.cs" t="Include" />
           <e p="Users.cs" t="Include" />
         </e>
@@ -72,6 +73,7 @@
         <e p="Startup.cs" t="Include" />
         <e p="Tools" t="Include">
           <e p="ModelsMapper.cs" t="Include" />
+          <e p="OrderService.cs" t="Include" />
           <e p="Validator.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
@@ -87,6 +89,7 @@
             <e p="CategoriesAddOrUpdate.cshtml" t="Include" />
             <e p="CategoriesList.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="OrdersList.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
             <e p="ProductsAddOrUpdate.cshtml" t="Include" />
             <e p="ProductsList.cshtml" t="Include" />
