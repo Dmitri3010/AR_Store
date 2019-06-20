@@ -23,10 +23,10 @@ namespace ArStore.API.Db
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-//                optionsBuilder.UseSqlServer(
-//                    "Data Source=localhost;Database=arstoreb_api;user= arstoreb_admin; password=Azaza7788");
                 optionsBuilder.UseSqlServer(
-                    "Data Source=DESKTOP-GE4L5QE;Database=ArStore;Trusted_Connection=True;MultipleActiveResultSets=true");
+                    "Data Source=localhost;Database=arstoreb_api;user= arstoreb_admin; password=Azaza7788");
+//                optionsBuilder.UseSqlServer(
+//                    "Data Source=DESKTOP-GE4L5QE;Database=ArStore;Trusted_Connection=True;MultipleActiveResultSets=true");
             }
         }
     }

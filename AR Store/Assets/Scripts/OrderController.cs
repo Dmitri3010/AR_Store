@@ -25,7 +25,7 @@ public class OrderController : MonoBehaviour
         form.AddField("Adress", adress.text);
         form.AddField("ProductId", ProductId);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:58335/api/orders", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://arstore.by/api/orders", form);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)

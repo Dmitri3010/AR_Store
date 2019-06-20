@@ -3074,7 +3074,7 @@ MonoBehaviour:
   name: {fileID: 340428296}
   phone: {fileID: 1578581852}
   adress: {fileID: 490684283}
-  ProductId: 1009
+  ProductId: 11
   okPanel: {fileID: 49526824}
   ErrorPanel: {fileID: 1719696286}
 --- !u!222 &742369470
@@ -5370,7 +5370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1704531524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6097,7 +6097,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2112698228}
-        m_MethodName: BlueColor
+        m_MethodName: RedColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6108,7 +6108,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2112698227}
-        m_MethodName: BlueColor
+        m_MethodName: RedColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6762,7 +6762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2112698228}
-        m_MethodName: RedColor
+        m_MethodName: BlueColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6773,7 +6773,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2112698227}
-        m_MethodName: RedColor
+        m_MethodName: BlueColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

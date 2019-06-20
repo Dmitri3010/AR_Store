@@ -17,7 +17,9 @@ namespace ArStore.API.Tools
                     Phone = request.Phone,
                     Date = DateTime.Now,
                     ProductId = request.ProductId,
-                    Adress =  request.Adress
+                    Adress =  request.Adress,
+                    
+                    
                 };
 
                 Orders.AddOrUpdate(order);
